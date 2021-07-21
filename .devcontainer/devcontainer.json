@@ -26,8 +26,8 @@
 
 	// Uncomment to use the Docker CLI from inside the container. See https://aka.ms/vscode-remote/samples/docker-from-docker.
 	// "mounts": [ "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind" ],
-	"workspaceFolder": "/workspace",
-  	"workspaceMount": "source=remote-workspace,target=/workspace,type=volume",
+	// "workspaceFolder": "/workspace",
+  	// "workspaceMount": "source=remote-workspace,target=/workspace,type=volume",
 
 	// Uncomment to connect as a non-root user if you've added one. See https://aka.ms/vscode-remote/containers/non-root.
 	// "remoteUser": "vscode"
