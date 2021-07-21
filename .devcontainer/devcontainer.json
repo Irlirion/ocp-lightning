@@ -31,5 +31,5 @@
 
 	// Uncomment to connect as a non-root user if you've added one. See https://aka.ms/vscode-remote/containers/non-root.
 	// "remoteUser": "vscode"
-	"runArgs": ["--shm-size=32gb", "--cpuset-cpus='10-17'", "--gpus all"],
+	"runArgs": ["--gpus=all", "--shm-size=32gb", "--cpuset-cpus=10-17"],
 }
