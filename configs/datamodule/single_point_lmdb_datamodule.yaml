@@ -1,0 +1,9 @@
+_target_: src.datamodules.single_point_lmdb_datamodule.SinglePointLmdbDataModule
+
+train_dir: ${data_dir}/is2re/all/train/data.lmdb
+val_dir: ${data_dir}/is2re/all/val_id/data.lmdb
+test_dir: None
+batch_size: 64
+num_workers: 0
+pin_memory: True
+is_otf_graph: False
