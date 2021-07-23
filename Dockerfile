@@ -2,16 +2,14 @@
 # Run: sudo docker run -v $(pwd):/workspace/project --gpus all -it --rm <project_name>
 
 
-FROM nvidia/cuda:11.1
-
+FROM nvidia/cuda:11.2.0-cudnn8-devel
 
 ENV CONDA_ENV_NAME=ocp
 ENV PYTHON_VERSION=3.8
-ENV PYTORCH_VERSION=1.8.1
 
 # Create a working directory
-RUN mkdir /workspace
-WORKDIR /workspace
+RUN mkdir /workspaces
+WORKDIR /workspaces
 
 # Install some basic utilities
 RUN apt-get update && apt-get install -y \
@@ -35,9 +33,9 @@ RUN conda update -n base -c defaults conda
 
 COPY env.yml ./
 # Create conda env
-RUN conda create \
-    -n ${CONDA_ENV_NAME} \
+RUN conda env create \
     -f env.yml \
+    -n ${CONDA_ENV_NAME} \
     python=${PYTHON_VERSION}
 
 # Set ${CONDA_ENV_NAME} to default virutal environment
